@@ -424,9 +424,9 @@ bool WIEGAND::DoWiegandConversion ()
       {
         // well time over 25 ms and bitCount !=8 , !=26, !=34 , must be noise or nothing then.
         _lastWiegand=_sysTick;
-        _bitCountA=0;
-        _cardTempA=0;
-        _cardTempHighA=0;
+        _bitCountC=0;
+        _cardTempC=0;
+        _cardTempHighC=0;
         _GateActive=0;
       }
       //Controller C
