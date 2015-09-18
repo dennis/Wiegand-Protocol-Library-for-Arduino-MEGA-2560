@@ -436,8 +436,25 @@ bool WIEGAND::DoWiegandConversion ()
 
       return false;
     }
-    else
+    else {
+      // We have received unexpected input. Assume it is noise and discard it
+      _lastWiegand=_sysTick;
+      _GateActive=0;
+
+      _bitCountA=0;
+      _cardTempA=0;
+      _cardTempHighA=0;
+
+      _bitCountB=0;
+      _cardTempB=0;
+      _cardTempHighB=0;
+
+      _bitCountC=0;
+      _cardTempC=0;
+      _cardTempHighC=0;
+
       return false;
+    }
   }
   else
     return false;
